@@ -4,32 +4,41 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // 컴포넌트를 캐시 처리할 변수
-    private Transform tr;
-    // 이동 속력 변수
-    public float moveSpeed;     // 10
-    // 회전 속도 변수
-    public float turnSpeed;     // 80
+    public float moveSpeed = 7.0f;
 
-
-    private void Start()
-    {
-        tr = GetComponent<Transform>();
-    }
+    float gravity = -20.0f; // 중력
+    float yVelocity = 0.0f; // y축 속력
+    float jumpPower = 5.0f; // 점프 force
+    bool isJumping = false; // 점프 중복 체크
 
     private void Update()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-        float r = Input.GetAxis("Mouse X");
+        var h = Input.GetAxis("Horizontal");
+        var v = Input.GetAxis("Vertical");
 
-        // 전후좌우 이동 방향 벡터 계산
-        Vector3 moveDir = (Vector3.forward * v) + (Vector3.right * h);
+        Vector3 dir = new Vector3(h, 0, v);
+        dir = dir.normalized;
 
-        // Translate(이동 방향 * 속력 * Time.deltaTime)
-        tr.Translate(moveDir * moveSpeed * Time.deltaTime);
+        dir = Camera.main.transform.TransformDirection(dir); // 카메라가 바라본 방향
+        transform.position += dir * moveSpeed; // 해당 방향으로 이동
 
-        // Vector3.up 축을 기준으로 turnSpeed만큼의 속도로 회전
-        tr.Rotate(Vector3.up * turnSpeed * Time.deltaTime * r);
+        if (Input.GetButtonDown("Jump") && !isJumping)
+        {
+            yVelocity = jumpPower;
+            isJumping = true;
+        }
+        yVelocity += gravity * Time.deltaTime; // 중력가속도 
+        dir.y = yVelocity; // 해당 방향으로 중력 연산
+
+        if (TryGetComponent(out CharacterController cc))
+        {
+            cc.Move(dir * moveSpeed * Time.deltaTime); // 이동
+            if (isJumping && cc.collisionFlags == CollisionFlags.Below)
+            {
+                isJumping = false;
+                yVelocity = 0.0f;
+            }
+        }
     }
+
 }
