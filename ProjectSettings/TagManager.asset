@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Desk
+  - Chair
+  - Window
+  - Interactive
+  - CinemachineTarget
+  - Book
   layers:
   - Default
   - TransparentFX
