@@ -12,14 +12,8 @@
     "com.unity.ide.vscode": "1.2.5",
     "com.unity.inputsystem": "1.14.0",
     "com.unity.mathematics": "1.2.6",
-<<<<<<< Updated upstream
-    "com.unity.render-pipelines.core": "14.0.11",
-    "com.unity.render-pipelines.universal": "14.0.11",
-    "com.unity.render-pipelines.universal-config": "14.0.10",
-=======
     "com.unity.render-pipelines.core": "14.0.12",
     "com.unity.render-pipelines.universal": "14.0.12",
->>>>>>> Stashed changes
     "com.unity.scriptablebuildpipeline": "1.21.25",
     "com.unity.searcher": "4.9.2",
     "com.unity.shadergraph": "14.0.12",
