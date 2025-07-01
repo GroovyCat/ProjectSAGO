@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ObjectSensing : MonoBehaviour
 {
-
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log($"{other.gameObject}");
