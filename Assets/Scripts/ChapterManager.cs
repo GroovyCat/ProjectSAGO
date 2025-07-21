@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class ChapterManager : MonoBehaviour
 {
@@ -8,13 +9,11 @@ public class ChapterManager : MonoBehaviour
     [Header("챕터별 스폰 위치")]
     public Transform[] spawnPoints;
 
-    [Header("플레이어 프리팹")]
-    public GameObject playerPrefab;
-
     public int CurrentChapter { get; private set; }
 
     void Awake()
     {
+
         if (Instance == null)
         {
             Instance = this;
@@ -38,23 +37,25 @@ public class ChapterManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        SpawnPlayer();
+        StartCoroutine(DelayedSpawn());
     }
 
-    void SpawnPlayer()
+    IEnumerator DelayedSpawn()
     {
-        if (spawnPoints.Length <= CurrentChapter)
+        // GameManager.Instance가 null이면 잠깐 대기
+        while (GameManager.Instance == null)
         {
-            Debug.LogWarning("해당 챕터의 스폰 위치가 없습니다.");
-            return;
+            yield return null;
         }
 
-        GameObject existing = GameObject.FindGameObjectWithTag("Player");
-        if (existing != null)
-            Destroy(existing);
+        if (spawnPoints == null || spawnPoints.Length <= CurrentChapter || spawnPoints[CurrentChapter] == null)
+        {
+            yield break;
+        }
 
-        Instantiate(playerPrefab, spawnPoints[CurrentChapter].position, Quaternion.identity);
+        GameManager.Instance.SpawnPlayerAt(spawnPoints[CurrentChapter]);
     }
+   
 
     public void CompleteChapter()
     {
@@ -65,4 +66,5 @@ public class ChapterManager : MonoBehaviour
             Debug.Log($"챕터 {CurrentChapter} 클리어됨.");
         }
     }
+
 }

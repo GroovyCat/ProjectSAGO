@@ -6,9 +6,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public ChapterManager chapterManager;
+    public GameObject playerPrefab;
 
-    void Awake()
+    private void Awake()
     {
         if (Instance == null)
         {
@@ -18,23 +18,26 @@ public class GameManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
-            return;
-        }
-
-        if (chapterManager == null)
-        {
-            chapterManager = GetComponentInChildren<ChapterManager>();
         }
     }
 
+    public void SpawnPlayerAt(Transform spawnPoint)
+    {
+        GameObject existing = GameObject.FindGameObjectWithTag("Player");
+        if (existing != null)
+        {
+            Debug.LogWarning("[GameManager] 기존 플레이어 제거됨");
+            Destroy(existing);
+        }
+        Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
+    }
     public void StartChapter(int chapterIndex)
     {
-        chapterManager.LoadChapter(chapterIndex);
+        ChapterManager.Instance?.LoadChapter(chapterIndex);
     }
 
     public void CompleteChapter()
     {
-        chapterManager.CompleteChapter();
+        ChapterManager.Instance?.CompleteChapter();
     }
-
 }
