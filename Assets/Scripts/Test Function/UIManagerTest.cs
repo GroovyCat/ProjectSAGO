@@ -4,9 +4,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIManager : MonoBehaviour
+public class UIManagerTest : MonoBehaviour
 {
-    public static UIManager instance;
+    public static UIManagerTest instance;
 
     public GameObject Background;
     public TMP_Text CanvasText;

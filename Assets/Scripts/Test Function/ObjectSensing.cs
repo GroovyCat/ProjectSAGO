@@ -9,7 +9,7 @@ public class ObjectSensing : MonoBehaviour
         Debug.Log($"{other.gameObject}");
             GameObject sesingObject = other.gameObject;
             {
-                UIManager.instance.ShowCanvasText(sesingObject.tag);
+                UIManagerTest.instance.ShowCanvasText(sesingObject.tag);
             }
     }
 }

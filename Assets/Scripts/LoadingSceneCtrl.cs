@@ -12,10 +12,10 @@ public class LoadingSceneCtrl : MonoBehaviour
     private void Start()
     {
         nextSceneName = PlayerPrefs.GetString("NextScene", "1.Third Floor Scene"); // 기본값은 새 게임
-        StartCoroutine(LoadSceneAsync());
+        StartCoroutine(LoadScene());
     }
 
-    IEnumerator LoadSceneAsync()
+    IEnumerator LoadScene()
     {
         AsyncOperation op = SceneManager.LoadSceneAsync(nextSceneName);
         op.allowSceneActivation = false;

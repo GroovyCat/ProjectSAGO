@@ -692,46 +692,13 @@ PrefabInstance:
     - {fileID: 1395829266970519099, guid: c3b020a45b6778a45bfbc9f9b3fc27e1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1814886338155952609, guid: c3b020a45b6778a45bfbc9f9b3fc27e1, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 2215210510244320043}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3b020a45b6778a45bfbc9f9b3fc27e1, type: 3}
 --- !u!4 &4176019149113425055 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8153441559353759516, guid: c3b020a45b6778a45bfbc9f9b3fc27e1, type: 3}
   m_PrefabInstance: {fileID: 5247507943830743939}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5907914769266692706 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1814886338155952609, guid: c3b020a45b6778a45bfbc9f9b3fc27e1, type: 3}
-  m_PrefabInstance: {fileID: 5247507943830743939}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2215210510244320043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5907914769266692706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6afe39cee9e073940b91c703a9ede93a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grappling: {fileID: -7915789255264261346}
-  quality: 200
-  damper: 14
-  strength: 800
-  velocity: 15
-  waveCount: 3
-  waveHeight: 1
-  affectCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!4 &7837565935588565380 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2600340727580264967, guid: c3b020a45b6778a45bfbc9f9b3fc27e1, type: 3}

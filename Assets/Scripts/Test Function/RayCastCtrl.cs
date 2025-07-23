@@ -29,7 +29,7 @@ public class RayCastCtrl : MonoBehaviour
 
                 if (hitObject != null) //물체가 있을 경우
                 {
-                    UIManager.instance.ShowCanvasText(hitObject.tag);
+                    UIManagerTest.instance.ShowCanvasText(hitObject.tag);
                 }
             }
         }
