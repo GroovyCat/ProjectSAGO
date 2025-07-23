@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectMove : MonoBehaviour
+public class LightMove : MonoBehaviour
 {
 
     public Vector3 moveDirection = Vector3.right; // 이동 방향 (예: Vector3.up, Vector3.forward)

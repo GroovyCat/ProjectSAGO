@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotateObj : MonoBehaviour
+public class BookShelfMove : MonoBehaviour
 {
   
     public Transform centerPoint;             // 회전 중심점

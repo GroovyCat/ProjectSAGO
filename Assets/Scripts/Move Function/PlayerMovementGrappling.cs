@@ -45,14 +45,9 @@ public class PlayerMovementGrappling : MonoBehaviour
     private RaycastHit slopeHit;
     private bool exitingSlope;
 
-    [Header("Camera Effects")]
-    public PlayerCam cam;
-    public float grappleFov = 95f;
-    public Transform orientation;
-
     float horizontalInput;
     float verticalInput;
-
+    public Transform orientation;
     Vector3 moveDirection;
 
     Rigidbody rb;
@@ -208,7 +203,7 @@ public class PlayerMovementGrappling : MonoBehaviour
 
         // calculate movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-        
+
         // on slope
         if (OnSlope() && !exitingSlope)
         {
@@ -277,32 +272,15 @@ public class PlayerMovementGrappling : MonoBehaviour
         activeGrapple = true;
 
         velocityToSet = CalculateJumpVelocity(transform.position, targetPosition, trajectoryHeight);
-        Invoke(nameof(SetVelocity), 0.1f);
-
-        Invoke(nameof(ResetRestrictions), 3f);
     }
 
     private Vector3 velocityToSet;
-    private void SetVelocity()
-    {
-        enableMovementOnNextTouch = true;
-        rb.velocity = velocityToSet;
-
-        cam.DoFov(grappleFov);
-    }
-
-    public void ResetRestrictions()
-    {
-        activeGrapple = false;
-        cam.DoFov(85f);
-    }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (enableMovementOnNextTouch)
         {
             enableMovementOnNextTouch = false;
-            ResetRestrictions();
 
             GetComponent<Grappling>().StopGrapple();
         }
