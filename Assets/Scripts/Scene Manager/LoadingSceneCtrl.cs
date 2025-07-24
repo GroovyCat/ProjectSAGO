@@ -26,11 +26,11 @@ public class LoadingSceneCtrl : MonoBehaviour
         {
             if (op.progress < 0.9f)
             {
-                loadingBar.value = Mathf.Lerp(loadingBar.value, op.progress, Time.deltaTime * 5f);
+                loadingBar.value = Mathf.Lerp(loadingBar.value, op.progress, Time.deltaTime * 1.5f);
             }
             else
             {
-                loadingBar.value = Mathf.Lerp(loadingBar.value, 1f, Time.deltaTime * 5f);
+                loadingBar.value = Mathf.Lerp(loadingBar.value, 1f, Time.deltaTime * 1.5f);
 
                 timer += Time.deltaTime;
                 if (loadingBar.value >= 0.99f && timer > 1f)
