@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public GameObject playerPrefab;
+    public GameObject playerPrefab1;
 
     private void Awake()
     {
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
             Debug.LogWarning("[GameManager] 기존 플레이어 제거됨");
             Destroy(existing);
         }
-        Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(playerPrefab1, spawnPoint.position, spawnPoint.rotation);
     }
     public void StartChapter(int chapterIndex)
     {

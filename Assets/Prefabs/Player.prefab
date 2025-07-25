@@ -168,8 +168,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   maxSlopeAngle: 45
-  cam: {fileID: 0}
-  grappleFov: 95
   orientation: {fileID: 1074139658495774071}
   state: 0
   freeze: 0
@@ -291,7 +289,6 @@ MonoBehaviour:
   useGravity: 1
   gravityCounterForce: 27
   orientation: {fileID: 1074139658495774071}
-  cam: {fileID: 0}
 --- !u!114 &8209146549465708760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,6 +608,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9440af1619478084f9b6c1222dc75512, type: 2}
+    - target: {fileID: 5948025149663069414, guid: c3b020a45b6778a45bfbc9f9b3fc27e1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 8153441559353759516, guid: c3b020a45b6778a45bfbc9f9b3fc27e1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1

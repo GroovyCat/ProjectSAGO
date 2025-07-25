@@ -26579,7 +26579,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  turnSpeed: 20
 --- !u!136 &966479282
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -26623,7 +26622,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35431,9 +35430,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f29aaa555f170e49a86011955258149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTr: {fileID: 966479285}
-  damping: 0.1
-  targetOffset: 2
+  follow: {fileID: 0}
+  mainCamera: {fileID: 0}
+  distance: 5
+  xSpeed: 4
+  ySpeed: 2
+  yMinLimit: -10
+  yMaxLimit: 40
+  xOffset: 0
+  yOffset: 0.3
+  zOffset: 0
+  zoomSpeed: 10
 --- !u!1001 &1279755175
 PrefabInstance:
   m_ObjectHideFlags: 0
