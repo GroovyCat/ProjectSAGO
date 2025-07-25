@@ -1291,21 +1291,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 270136789}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1604ab07a24b3544a9be9348d310370, type: 3}
+  m_Script: {fileID: 11500000, guid: 3483d97cc09561a43a43eac573abf29e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  codeText: {fileID: 1365243913}
+  codeText: {fileID: 0}
   inputCooldown: 0.2
-  animators:
-  - {fileID: 1603172499}
-  - {fileID: 1625825886}
-  - {fileID: 1508680898}
-  - {fileID: 1686750529}
-  - {fileID: 706945805}
-  animators2:
-  - {fileID: 857720467}
-  - {fileID: 384993072}
-  - {fileID: 1410049949}
+  animators: []
+  animators2: []
 --- !u!1 &287351696
 GameObject:
   m_ObjectHideFlags: 0
@@ -4085,22 +4077,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 673130558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f3eaa68e0b936f4c99baa6030e55538, type: 3}
+  m_Script: {fileID: 11500000, guid: ad445d885ddc52d4a89f9ae13b1ff35f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  codeText: {fileID: 1365243913}
+  codeText: {fileID: 0}
   inputCooldown: 0.2
-  animators:
-  - {fileID: 1156988936}
-  - {fileID: 1219256993}
-  - {fileID: 2119462050}
-  - {fileID: 1139462157}
-  animators2:
-  - {fileID: 1603172499}
-  - {fileID: 1625825886}
-  - {fileID: 1508680898}
-  - {fileID: 1686750529}
-  - {fileID: 706945805}
+  animators: []
+  animators2: []
 --- !u!1 &706945802
 GameObject:
   m_ObjectHideFlags: 0
@@ -4715,10 +4698,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7759613320780553416, guid: aa84aae2a1233e948bc8ed8a145da2f4, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 09aa7f8341e1840499a59f99778fa941, type: 2}
     - target: {fileID: 1957748446742766092, guid: 749f5487712ab8a4a886a93ef4e19e6e, type: 3}
       propertyPath: m_LocalScale.x
       value: 50
@@ -4780,6 +4759,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7759613320780553416, guid: 749f5487712ab8a4a886a93ef4e19e6e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 09aa7f8341e1840499a59f99778fa941, type: 2}
+    - target: {fileID: 7759613320780553416, guid: aa84aae2a1233e948bc8ed8a145da2f4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 09aa7f8341e1840499a59f99778fa941, type: 2}
@@ -9570,20 +9553,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1569329493}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ee0d6860c68fb843aef96fc04df445b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a1649dba69e20643af87d7e8f2c6ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  codeText: {fileID: 1365243913}
+  codeText: {fileID: 0}
   inputCooldown: 0.2
-  animators:
-  - {fileID: 857720467}
-  - {fileID: 384993072}
-  - {fileID: 1410049949}
-  animators2:
-  - {fileID: 1156988936}
-  - {fileID: 1219256993}
-  - {fileID: 2119462050}
-  - {fileID: 1139462157}
+  animators: []
+  animators2: []
 --- !u!1 &1574142894
 GameObject:
   m_ObjectHideFlags: 0

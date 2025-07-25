@@ -26,6 +26,7 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _ALPHATEST_ON
+  - _ENVIRONMENTREFLECTIONS_OFF
   - _METALLICSPECGLOSSMAP
   - _NORMALMAP
   m_InvalidKeywords:
@@ -37,8 +38,7 @@ Material:
   m_CustomRenderQueue: 2450
   stringTagMap:
     RenderType: TransparentCutout
-  disabledShaderPasses:
-  - SHADOWCASTER
+  disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
