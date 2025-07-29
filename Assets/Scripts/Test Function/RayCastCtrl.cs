@@ -4,39 +4,34 @@ using UnityEngine;
 
 public class RayCastCtrl : MonoBehaviour
 {
-    public float raycastDistance = 3f; //인식할 수 있는 범위
-    public Transform characterBody;
+    public float raycastDistance = 3f; // 인식 거리
+    public Camera playerCamera;       // 플레이어 카메라 참조
 
     RaycastHit hit;
     Ray ray;
 
     void Update()
     {
-        Debug.DrawLine(ray.origin, ray.origin + ray.direction * raycastDistance, Color.red); //씬에서 내가 보고있는 방향을 표시
+        // 카메라 기준 origin, direction
+        Vector3 origin = playerCamera.transform.position;
+        Vector3 direction = playerCamera.transform.forward;
 
-        Vector3 origin = characterBody.position + Vector3.up * 1f; // 조금 위에서 쏘면 정확도 향상
-        Vector3 direction = characterBody.forward;
+        ray = new Ray(origin, direction);
 
-        ray = new Ray(transform.position, direction); //보고있는 방향으로 살펴보기
+        // 디버그 라인 표시
+        Debug.DrawLine(origin, origin + direction * raycastDistance, Color.red);
 
-        //ray = Camera.main.ScreenPointToRay(Input.mousePosition); //마우스로 살펴보기
-
-        if (Input.GetKeyDown(KeyCode.E)) //키보드 E를 눌렀을 때
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            if (Physics.Raycast(ray, out hit, raycastDistance)) //인식할 수 있는 범위 안에서 물체 확인
+            if (Physics.Raycast(ray, out hit, raycastDistance))
             {
-                GameObject hitObject = hit.collider.gameObject; //주변 물체의 정보를 가져옵니다.
+                GameObject hitObject = hit.collider.gameObject;
 
-                if (hitObject != null) //물체가 있을 경우
+                if (hitObject != null)
                 {
-                    UIManagerTest.instance.ShowCanvasText(hitObject.tag);
+                    Debug.Log($"[RayCastCtrl] 감지된 오브젝트: {hitObject.name}");
                 }
             }
         }
     }
 }
-
-
-// 물건 감지 
-// 1. 콜라이더 방식
-// 2. 코드 사용하여 transform.forward, 현재 위치 - 감지할 오브젝트 위치 //정면과 오브젝트위치 각도 계산등 코드로 계산하여 범위감지
