@@ -10,6 +10,7 @@ TagManager:
   - Interactive
   - CinemachineTarget
   - Book
+  - JumpZone
   layers:
   - Default
   - TransparentFX

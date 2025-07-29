@@ -6,22 +6,22 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/0. StartUIScene.unity
+    path: Assets/_Scenes/0.StartUIScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/_Scenes/1. Third Floor Scene.unity
+    path: Assets/_Scenes/1.Third Floor Scene.unity
     guid: 72b38af525094bd4f937a1a596cbb517
   - enabled: 1
-    path: Assets/_Scenes/2. Maze Scene.unity
+    path: Assets/_Scenes/2.Maze Scene.unity
     guid: c0fb86b000d75b649a8eec0c67f93f77
   - enabled: 1
-    path: Assets/_Scenes/3. Second Floor Scene.unity
+    path: Assets/_Scenes/3.Second Floor Scene.unity
     guid: d9d13dfd2a07fdf419883cbfe9cda88a
   - enabled: 1
-    path: Assets/_Scenes/4. Drone Scene.unity
+    path: Assets/_Scenes/4.Drone Scene.unity
     guid: ddfc9fa380c6b2a4a837d293521bf1af
   - enabled: 1
-    path: Assets/_Scenes/5. First Floor Boss Scene.unity
+    path: Assets/_Scenes/5.First Floor Boss Scene.unity
     guid: b667051f3fbb9824f9d63f5b30f5c074
   - enabled: 1
     path: Assets/_Scenes/LoadingScene.unity
