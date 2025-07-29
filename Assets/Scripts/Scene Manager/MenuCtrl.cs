@@ -32,11 +32,19 @@ public class MenuCtrl : MonoBehaviour
 
     public void OnClickLoadChapter2()
     {
-        OnClickLoadChapterScene("2.Second Floor 1Scene", 2);
+        OnClickLoadChapterScene("2.Maze Scene", 2);
     }
     public void OnClickLoadChapter3()
     {
-        OnClickLoadChapterScene("3.Second Floor 2 Scene", 3);
+        OnClickLoadChapterScene("3.Second Floor Scene", 3);
+    }
+    public void OnClickLoadChapter4()
+    {
+        OnClickLoadChapterScene("4.Drone Scene", 4);
+    }
+    public void OnClickLoadChapter5()
+    {
+        OnClickLoadChapterScene("5.First Floor Boss Scene", 5);
     }
 
 
