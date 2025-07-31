@@ -8,16 +8,38 @@ public class GameManager : MonoBehaviour
 
     public GameObject playerPrefab1;
 
-    private void Awake()
+    public TutorialManager tutorialManagerFromPlayer;
+
+    void Awake()
     {
-        if (Instance == null)
+        if (Instance == null) Instance = this;
+
+        else Destroy(gameObject);
+        DontDestroyOnLoad(gameObject);
+    }
+
+    public void RegisterTutorialManager(TutorialManager tm)
+    {
+        tutorialManagerFromPlayer = tm;
+    }
+
+    public void TryStartTutorial()
+    {
+        if (tutorialManagerFromPlayer != null)
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+            tutorialManagerFromPlayer.StartTutorial();
         }
         else
         {
-            Destroy(gameObject);
+            Debug.LogWarning("튜토리얼 매니저가 연결되지 않았습니다.");
+        }
+    }
+
+    public void OpenSettings()
+    {
+        if (tutorialManagerFromPlayer != null)
+        {
+            tutorialManagerFromPlayer.settingsPanel.SetActive(true);
         }
     }
 
@@ -40,4 +62,5 @@ public class GameManager : MonoBehaviour
     {
         ChapterManager.Instance?.CompleteChapter();
     }
+  
 }
