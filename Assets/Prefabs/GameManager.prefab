@@ -45,3 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab1: {fileID: 1014132740229093692, guid: fcb5fc957637faf4b9bb2d410aa8749e, type: 3}
+  tutorialManagerFromPlayer: {fileID: 6035414635888151635, guid: fcb5fc957637faf4b9bb2d410aa8749e, type: 3}
+  spawnPoint: {fileID: 6518783307743326778, guid: fcb5fc957637faf4b9bb2d410aa8749e, type: 3}
+  currentStageNumber: 0

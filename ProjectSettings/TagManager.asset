@@ -11,6 +11,8 @@ TagManager:
   - CinemachineTarget
   - Book
   - JumpZone
+  - Bullet
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX
