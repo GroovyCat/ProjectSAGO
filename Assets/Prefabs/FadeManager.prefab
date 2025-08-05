@@ -49,7 +49,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
-  fadeDuration: 1.5
+  fadeDuration: 2
   timeline: {fileID: 0}
   player: {fileID: 1014132740229093692, guid: fcb5fc957637faf4b9bb2d410aa8749e, type: 3}
-  tutorialUI: {fileID: 1014132740229093692, guid: fcb5fc957637faf4b9bb2d410aa8749e, type: 3}
