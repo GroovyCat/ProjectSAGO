@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/_Scenes/4.Drone Scene.unity
     guid: ddfc9fa380c6b2a4a837d293521bf1af
   - enabled: 1
-    path: Assets/_Scenes/5.First Floor Boss Scene.unity
+    path: Assets/_Scenes/4.First Floor Boss Scene.unity
     guid: b667051f3fbb9824f9d63f5b30f5c074
   - enabled: 1
     path: Assets/_Scenes/LoadingScene.unity
