@@ -11,12 +11,9 @@ public class MenuCtrl : MonoBehaviour
     public GameObject settingUI;
     public void OnClickNewGame()
     {
-        Debug.Log("새 게임!");
-        PlayerPrefs.SetString("NextScene", "1.Third Floor Scene"); // 새게임용 씬
-
-
-
-        SceneManager.LoadScene("LoadingScene");
+        PlayerPrefs.SetInt("StartWithTutorial", 1); // 튜토리얼 플래그
+        PlayerPrefs.Save();
+        SceneManager.LoadScene("1.Third Floor Scene");
     }
     public void OnClickLoadChapterScene(string sceneName, int chapterIndex)
     {

@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
 
     public GameObject playerPrefab1;
 
-    public TutorialManager tutorialManagerFromPlayer;
 
     void Awake()
     {
@@ -18,30 +17,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void RegisterTutorialManager(TutorialManager tm)
-    {
-        tutorialManagerFromPlayer = tm;
-    }
-
-    public void TryStartTutorial()
-    {
-        if (tutorialManagerFromPlayer != null)
-        {
-            tutorialManagerFromPlayer.StartTutorial();
-        }
-        else
-        {
-            Debug.LogWarning("튜토리얼 매니저가 연결되지 않았습니다.");
-        }
-    }
-
-    public void OpenSettings()
-    {
-        if (tutorialManagerFromPlayer != null)
-        {
-            tutorialManagerFromPlayer.settingsPanel.SetActive(true);
-        }
-    }
+    
 
     public void SpawnPlayerAt(Transform spawnPoint)
     {
