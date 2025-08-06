@@ -39,11 +39,18 @@ public class MenuCtrl : MonoBehaviour
     {
         OnClickLoadChapterScene("4.Drone Scene", 4);
     }
-    public void OnClickLoadChapter5()
+    public void RestartGameLikeFresh()
     {
-        OnClickLoadChapterScene("5.First Floor Boss Scene", 5);
+        // 저장된 정보 초기화 (튜토리얼 상태, 선택값, 세이브 등)
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+        // 현재 씬을 다시 로드 (처음처럼!)
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
+    public void OnClickRestartLikeFresh()
+    {
+        RestartGameLikeFresh(); // 버튼 연결
+    }
 
     public void OpenSettings()
     {
